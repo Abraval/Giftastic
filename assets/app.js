@@ -2,6 +2,7 @@ var feelings = ["Happy", "Angry", "Bored", "Excied", "Confused", "Annoyed", "Con
 
 
 function displayGif() {
+  $("#gif-view").empty();
 
   var feeling = $(this).attr("data-name");
   console.log(feeling)
@@ -25,16 +26,18 @@ function displayGif() {
 
           var gifDiv = $("<div>");
 
-          var rating = results[i].rating;
+          // var rating = results[i].rating;
 
-          var p = $("<p>").text("Rating: " + rating);
+          // var p = $("<p>").text("Rating: " + rating);
 
           var feelingImage = $("<img>");
 
           feelingImage.attr("src", results[i].images.fixed_height.url);
+          feelingImage.addClass("img-thumbnail m-3 float-left")
 
-          gifDiv.append(p);
           gifDiv.append(feelingImage);
+          // gifDiv.append(p);
+          
 
           $("#gif-view").prepend(gifDiv);
         }
