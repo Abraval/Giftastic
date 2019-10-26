@@ -1,0 +1,19 @@
+body{
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+   
+    }
+.jumbotron{
+    opacity: 0.6
+    
+}
+
+.btn {
+    opacity: 0.9
+}
+
+.btn-f {
+    opacity: 0.9
+}

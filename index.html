@@ -4,33 +4,35 @@
 <head>
   <meta charset="utf-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
   <title>Giftastic</title>
 </head>
 
 <body>
 
   <div class="container">
-    <div class="jumbotron jumbotron-fluid my-4 bg-warning text-center display-6 text-white border-0 rounded shadow">
-    <h1 class="font-weight-bold">FACES PEOPLE MAKE</h1>
-    <p class="font-italic">Click on any FEELING button below to see!</p>
+    <div class="jumbotron jumbotron-fluid my-4 bg-secondary text-center display-6 text-white border-0 rounded-pill shadow">
+      <h1 class="font-weight-bold">COUNTRIES AROUND THE WORLD</h1>
+      <p class="font-italic">Click on any COUNTRY button below to see!</p>
     </div>
 
     <div id="buttons-view" class="my-2 p-2 text-center"></div>
 
     <form id="gif-form" class="text-center">
-      <label for="gif-input" class="mr-2 ml-4"><h5>Type something...</h5></label>
-      <input type="text" id="gif-input" class="bg-light border rounded shadow">
-      
+      <label for="gif-input" class="mr-2 ml-4">
+        <h5 class="text-white">Type something...</h5>
+      </label>
+      <input type="text" id="gif-input" class="bg-light border rounded-pill shadow">
+
       <input id="add-gif" type="submit" value="Add a button!" class="btn btn-warning shadow m-4">
     </form>
 
     <div id="gif-view" class="my-4 p-2"></div>
- 
-  
+
+
   </div>
   <script src="assets/app.js"></script>
 </body>

@@ -1,4 +1,4 @@
-var feelings = ["Happy", "Angry", "Bored", "Excied", "Confused", "Annoyed", "Contempt", "Surprised", "Disgusted", "Scared", "Emotional", "Amused", "Joyful", "Romantic", "Sensitive"];
+var feelings = ["USA", "England", "France", "Ukraine", "Japan", "Turkey", "India", "Brazil", "Israel", "UAE", "Zambia", "Russia", "China", "Australia", "Mexico"];
 
 
 function displayGif() {
@@ -7,7 +7,7 @@ function displayGif() {
   var feeling = $(this).attr("data-name");
   console.log(feeling)
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=u61R4WTo5dw995TP19npNy03UWNNeeJZ&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&city&api_key=u61R4WTo5dw995TP19npNy03UWNNeeJZ&limit=10";
 
 
   $.ajax({
@@ -59,7 +59,7 @@ function renderButtons() {
 
     var a = $("<button>");
 
-    a.addClass("btn-f btn-lg btn-info border-0 rounded shadow text-white m-1");
+    a.addClass("btn-f btn-lg btn-dark border-0 rounded shadow text-white m-1");
 
     a.attr("data-name", feelings[i]);
 
