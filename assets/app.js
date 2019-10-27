@@ -26,7 +26,11 @@ function displayGif() {
         if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
           var gifDiv = $("<div>");
-          gifDiv.addClass("gifDiv")
+          gifDiv.addClass("gifDiv card float-left m-2 bg-dark border-0 rounded-lg shadow")
+
+          var rating = results[i].rating.toUpperCase();
+          var p = $("<p>").text("Rating:  " + rating);
+          p.addClass("card-text text-white font-weight-bold text-left p-1")
 
           var feelingImage = $("<img>");
 
@@ -38,8 +42,9 @@ function displayGif() {
           feelingImage.attr("data-animate", results[i].images.fixed_height.url)
 
 
-          feelingImage.addClass("gifImg rounded-lg m-3 float-left");
-          gifDiv.append(feelingImage);
+          feelingImage.addClass("gifImg image-fluid");
+          gifDiv.append(p);
+          gifDiv.prepend(feelingImage);
           $("#gif-view").prepend(gifDiv);
 
 
