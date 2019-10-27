@@ -26,6 +26,7 @@ function displayGif() {
         if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
           var gifDiv = $("<div>");
+          gifDiv.addClass("gifDiv")
 
           var feelingImage = $("<img>");
 
