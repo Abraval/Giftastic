@@ -42,7 +42,7 @@ function displayGif() {
           feelingImage.attr("data-animate", results[i].images.fixed_height.url)
 
 
-          feelingImage.addClass("gifImg image-fluid");
+          feelingImage.addClass("gifImg image-fluid mb-1");
           gifDiv.append(p);
           gifDiv.prepend(feelingImage);
           $("#gif-view").prepend(gifDiv);

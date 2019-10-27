@@ -6,7 +6,8 @@ body{
    
     }
 .jumbotron{
-    opacity: 0.5;
+    background-color: rgba(36, 62, 70, 0.7);
+  opacity: 0.8;
     font-family: 'Prompt', sans-serif;
     
 }
@@ -29,5 +30,5 @@ body{
 }
 
 .card{
-    background-color: rgba(91, 192, 222, 0.7);
+    background-color: rgba(36, 62, 70, 0.7);
 }
