@@ -109,4 +109,10 @@ $(document).on("click", ".btn-f", displayGif);
 
 // $(document).on("click", ".movie-btn", displayMovieInfo);
 
+  function reset(){
+    window.location.reload()
+  };
+  $(".jumbotron").on("click", reset);
+    
+
 
