@@ -15,11 +15,19 @@ body{
 }
 
 .btn {
-    opacity: 0.9;
+    opacity: 0.8;
     font-family: 'Prompt', sans-serif;
 }
 
 .btn-f {
     opacity: 0.9;
     font-family: 'Prompt', sans-serif;
+}
+#gif-input{
+    background-color: grey;
+    opacity: 0.8
+}
+
+.card{
+    background-color: rgba(91, 192, 222, 0.7);
 }

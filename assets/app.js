@@ -26,11 +26,11 @@ function displayGif() {
         if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
           var gifDiv = $("<div>");
-          gifDiv.addClass("gifDiv card float-left m-2 bg-dark border-0 rounded-lg shadow")
+          gifDiv.addClass("gifDiv card float-left m-2 border-0 rounded-lg shadow")
 
           var rating = results[i].rating.toUpperCase();
           var p = $("<p>").text("Rating:  " + rating);
-          p.addClass("card-text text-white font-weight-bold text-left p-1")
+          p.addClass("card-text text-white font-weight-bold text-left px-2 py-1")
 
           var feelingImage = $("<img>");
 
@@ -93,6 +93,11 @@ $("#add-gif").on("click", function (event) {
   event.preventDefault();
 
   var gif = $("#gif-input").val().trim();
+
+  // if (gif === null) {
+  //   alert("Type something...")
+  //   return
+  // }
 
   feelings.push(gif);
 
