@@ -32,7 +32,7 @@ function displayGif() {
 
           feelingImage.attr("src", results[i].images.fixed_height_still.url)
           feelingImage.attr("data-state", "still")
-      
+
           feelingImage.attr("data-still", results[i].images.fixed_height_still.url);
 
           feelingImage.attr("data-animate", results[i].images.fixed_height.url)
@@ -42,23 +42,26 @@ function displayGif() {
           gifDiv.append(feelingImage);
           $("#gif-view").prepend(gifDiv);
 
+
+
+          $(".gifImg").on("click", function () {
+ 
           
 
-          $(".gifImg").on("click", function() {
             var state = $(this).attr("data-state");
-          if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-          } else if (state === "animate") {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-          }
+            if (state === "still") {
+              $(this).attr("src", $(this).attr("data-animate"));
+              $(this).attr("data-state", "animate");
+            } else if (state === "animate") {
+              $(this).attr("src", $(this).attr("data-still"));
+              $(this).attr("data-state", "still");
+            }
           });
 
-          }
         }
-      });
-    };
+      }
+    });
+};
 
 
 function renderButtons() {
