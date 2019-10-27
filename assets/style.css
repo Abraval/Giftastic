@@ -6,14 +6,20 @@ body{
    
     }
 .jumbotron{
-    opacity: 0.5
+    opacity: 0.5;
+    font-family: 'Prompt', sans-serif;
     
+}
+.name{
+    font-size: 50px;
 }
 
 .btn {
-    opacity: 0.9
+    opacity: 0.9;
+    font-family: 'Prompt', sans-serif;
 }
 
 .btn-f {
-    opacity: 0.9
+    opacity: 0.9;
+    font-family: 'Prompt', sans-serif;
 }

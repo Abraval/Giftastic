@@ -38,7 +38,7 @@ function displayGif() {
           feelingImage.attr("data-animate", results[i].images.fixed_height.url)
 
 
-          feelingImage.addClass("img-thumbnail gifImg m-3 float-left");
+          feelingImage.addClass("gifImg rounded-lg m-3 float-left");
           gifDiv.append(feelingImage);
           $("#gif-view").prepend(gifDiv);
 
