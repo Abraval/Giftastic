@@ -16,9 +16,10 @@ function displayGif() {
   })
 
     .then(function (response) {
-      console.log(response)
+      // console.log(response)
 
       var results = response.data;
+      console.log(results)
 
       for (var i = 0; i < results.length; i++) {
 
@@ -26,29 +27,37 @@ function displayGif() {
 
           var gifDiv = $("<div>");
 
-          // var rating = results[i].rating;
-
-          // var p = $("<p>").text("Rating: " + rating);
-
           var feelingImage = $("<img>");
 
-          feelingImage.attr("src", results[i].images.fixed_height.url);
-          feelingImage.addClass("img-thumbnail m-3 float-left")
+          feelingImage.attr("src", results[i].images.fixed_height_still.url)
+          feelingImage.attr("data-state", "still")
+      
+          feelingImage.attr("data-still", results[i].images.fixed_height_still.url);
 
+          feelingImage.attr("data-animate", results[i].images.fixed_height.url)
+
+
+          feelingImage.addClass("img-thumbnail gifImg m-3 float-left");
           gifDiv.append(feelingImage);
-          // gifDiv.append(p);
+          $("#gif-view").prepend(gifDiv);
+
           
 
-          $("#gif-view").prepend(gifDiv);
+          $(".gifImg").on("click", function() {
+            var state = $(this).attr("data-state");
+          if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else if (state === "animate") {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+          });
+
+          }
         }
-      }
-    });
-
-
-};
-
-
-
+      });
+    };
 
 
 function renderButtons() {
