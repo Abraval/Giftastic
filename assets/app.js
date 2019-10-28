@@ -49,19 +49,19 @@ function displayGif() {
 
 
 
-          $(".gifImg").on("click", function () {
+          // $(".gifImg").on("click", function () {
  
           
 
-            var state = $(this).attr("data-state");
-            if (state === "still") {
-              $(this).attr("src", $(this).attr("data-animate"));
-              $(this).attr("data-state", "animate");
-            } else if (state === "animate") {
-              $(this).attr("src", $(this).attr("data-still"));
-              $(this).attr("data-state", "still");
-            }
-          });
+          //   var state = $(this).attr("data-state");
+          //   if (state === "still") {
+          //     $(this).attr("src", $(this).attr("data-animate"));
+          //     $(this).attr("data-state", "animate");
+          //   } else if (state === "animate") {
+          //     $(this).attr("src", $(this).attr("data-still"));
+          //     $(this).attr("data-state", "still");
+          //   }
+          // });
 
         }
       }
@@ -107,7 +107,19 @@ renderButtons();
 
 $(document).on("click", ".btn-f", displayGif);
 
-// $(document).on("click", ".movie-btn", displayMovieInfo);
+$(document).on("click", ".gifImg", function () {
+ 
+          
+
+  var state = $(this).attr("data-state");
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else if (state === "animate") {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+});
 
   function reset(){
     window.location.reload()
