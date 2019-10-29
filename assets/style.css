@@ -18,24 +18,30 @@ body{
 .btn {
     opacity: 0.8;
     font-family: 'Prompt', sans-serif;
+  
 }
 .btn:hover{
     background-color: rgb(1, 87, 87);
   
+  
 }
 .btn:active {
     transform: translateY(4px);
+  
 }
 
 .btn-f {
     opacity: 0.9;
     font-family: 'Prompt', sans-serif;
+  
 }
 .btn-f:hover{
-    background-color: rgb(53, 92, 104);;
+    background-color: rgb(53, 92, 104);
+  
 }
 .btn-f:active {
         transform: translateY(4px);
+      
 }
 #gif-input{
     background-color: grey;

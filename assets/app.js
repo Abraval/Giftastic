@@ -7,7 +7,7 @@ function displayGif() {
   var feeling = $(this).attr("data-name");
   console.log(feeling)
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&city&api_key=u61R4WTo5dw995TP19npNy03UWNNeeJZ&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + feeling + "&api_key=u61R4WTo5dw995TP19npNy03UWNNeeJZ&limit=10";
 
 
   $.ajax({
@@ -77,7 +77,8 @@ function renderButtons() {
 
     var a = $("<button>");
 
-    a.addClass("btn-f btn-lg btn-dark border-0 rounded shadow text-white m-1");
+    a.addClass("btn-f btn btn-lg btn-dark border-0 shadow text-white m-1");
+   
 
     a.attr("data-name", feelings[i]);
 
@@ -94,10 +95,10 @@ $("#add-gif").on("click", function (event) {
 
   var gif = $("#gif-input").val().trim();
 
-  // if (gif === null) {
-  //   alert("Type something...")
-  //   return
-  // }
+  if (gif === "") {
+    alert("Type something...")
+  return
+  }
 
   feelings.push(gif);
 
